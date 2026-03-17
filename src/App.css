@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('./assets/fonts/PressStart2P.ttf') format('truetype');
+}
+
+
+
+body {
+  font-family: 'PressStart2P', sans-serif;
+}
+
+
+
+h1, p, label, button, input {
+  font-family: 'PressStart2P', sans-serif;
+}
+
+
+
+
+
