@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sala-estudio {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('/saladeestudio.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.room-light {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(255, 245, 225, 0.05), rgba(23, 10, 31, 0.10)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.04), transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hud-top {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+  padding: 14px 22px;
+  border-radius: 18px;
+  background: rgba(38, 16, 50, 0.66);
+  border: 2px solid rgba(243, 232, 200, 0.55);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.titulo-sala {
+  color: #fff6ea;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitulo-sala {
+  margin-top: 6px;
+  color: #f3e8c8;
+  font-size: 13px;
+}
+
+.player-wrapper {
+  position: absolute;
+  z-index: 15;
+}
+
+.gatito-contenedor {
+  transform-origin: center bottom;
+  filter: drop-shadow(0 10px 6px rgba(0, 0, 0, 0.35));
+}
+
+.zone-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 2px dashed rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+}
+
+.music-marker {
+  background: rgba(255, 128, 220, 0.28);
+}
+
+.laptop-marker {
+  background: rgba(122, 191, 255, 0.28);
+}
+
+.coffee-marker {
+  background: rgba(255, 196, 90, 0.28);
+}
+
+@media (max-width: 768px) {
+  .hud-top {
+    width: calc(100% - 24px);
+    top: 12px;
+    padding: 12px 16px;
+  }
+
+  .titulo-sala {
+    font-size: 22px;
+  }
+
+  .subtitulo-sala {
+    font-size: 11px;
+  }
+
+  .zone-marker {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}
